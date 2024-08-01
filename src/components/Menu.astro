@@ -50,14 +50,14 @@ import { GithubIcon, MoonIcon, SunIcon } from 'astro-feather';
   const menuItems: HTMLElement = document.querySelector('#menu-items')!;
   const style = 'text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-white dark:hover:text-white h-10 text-sm px-3 md:px-4 py-3 flex items-center justify-center whitespace-nowrap';
 
-  menu.push(`<a href="#about-me" class="${style}">About me</a>`);
+  menu.push(`<a href="#about-me" class="${style}">Sobre mim</a>`);
 
   items.forEach((item) => {
     const link = `<a href="#${item.textContent?.toLowerCase().replace(' ', '-')}" class="${style}">${item.textContent}</a>`;
     menu.push(link);
   });
 
-  menu.push(`<a href="#contact" class="${style}">Contact</a>`);
+  menu.push(`<a href="#contact" class="${style}">Contato</a>`);
 
   menuItems.innerHTML = menu.toString().split(',').join('');
 </script>

@@ -1,133 +1,151 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Menu from '../components/Menu.astro';
-import Hero from '../components/Hero.astro';
-import Skills from '../components/Skills.astro';
-import Experience from '../components/Experience.astro';
-import Projects from '../components/Projects.astro';
-import Products from '../components/Products.astro';
-import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Menu from "../components/Menu.astro";
+import Hero from "../components/Hero.astro";
+import Skills from "../components/Skills.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import Products from "../components/Products.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 
-const skills = ['TypeScript', 'JavaScript', 'HTML', 'CSS', 'Angular', 'Vue', 'Nuxt', 'User Interface Design', 'User Experience Design', 'Tailwind', 'Flexbox', 'CSS Grid', 'Astro', 'GSAP', 'GreenSock', 'Animation', 'Design', 'Figma', 'XD', 'Framer', 'Responsive', 'Mobile', 'GIT', 'Ecommerce', 'Wordpress', 'Shopify', 'Nuvem Shop', 'AngularJS', 'SCSS', 'Prototype', 'Mockup', 'Web Design', 'Illustration', 'Photoshop', 'Illustrator', 'WYSIWYG', 'Document Editor', 'Rich Text Editing', 'Chat GPT'];
+const skills = [
+  "TypeScript",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Angular",
+  "React",
+  "Next",
+  "Java",
+  "C#",
+  "Spring Boot",
+  ".NET",
+  "Tailwind",
+  "User Interface Design",
+  "User Experience Design",
+  "Flexbox",
+  "CSS Grid",
+  "Astro",
+  "SASS",
+  "Design",
+  "Figma",
+  "XD",
+  "SQL",
+  "NoSQL",
+  "Responsive Design",
+  "GIT",
+  "Spring Boot",
+  "REST API",
+  "CI/CD",
+  "Docker",
+  "AngularJS",
+  "SCSS",
+  "Kubernetes",
+  "Mockup",
+  "Web Design",
+  "NX",
+  "Photoshop",
+  "Husky",
+  "WYSIWYG",
+  "Document Editor",
+  "Rich Text Editing",
+  "Chat GPT",
+  "Prettier",
+  "JSON",
+  "Jest",
+  "Junit",
+  "Karma",
+  "Jasmine",
+  "KISS",
+  "DRY",
+  "Solid",
+];
 
 const career = [
   {
-    date: 'Sep 2019 - 4 yrs 11 mos',
-    title: 'Software Engineer',
-    company: 'Accountfy',
-    link: 'https://accountfy.com/',
-    description: ['Responsável pelo módulo de reports/notas explicativas', 'Descoberta de novas tecnologias', 'Tech lead'],
+    date: "Dez 2023 - o momento · 9 meses",
+    title: "Desenvolvedor Front-end",
+    company: "Accountfy",
+    link: "https://www.accountfy.com/",
+    description: ["Angular", "Jenkins", "Onlyoffice", "Jenkins", "BitBucket"],
   },
   {
-    date: 'May 2018 - Aug 2019 · 1 yr 4 mos',
-    title: 'UI Designer & Front-End Developer',
-    company: 'Serrabits',
-    link: 'https://serrabits.com.br/',
-    description: ['Refatoração de componentes', 'Criação de Design Tokens', 'Criação do Design System', 'Implementação do Design System', 'Desenvolvimento de novas features', 'Identidade de novos produtos', 'Desenvolvimento do site', 'Pesquisas de UX em campo'],
+    date: "Jul 2022 - Out 2023 · 1 ano 4 meses",
+    title: "Desenvolvedor Front-end",
+    company: "Geofusion",
+    link: "https://www.geofusion.com.br/",
+    description: ["React", "Backbone", "JQuery", "GoCD", "GitLab"],
   },
   {
-    date: 'Jan 2017 - Fev 2018 · 1 yr 1 mo',
-    title: 'UI Designer & Front-End Developer',
-    company: 'Monk',
-    link: 'https://serrabits.com.br/',
-    description: ['Desenvolvimento de ecommerce', 'Desenvolvimento de sites', 'Desenvolvimento de animações', 'Desenvolvimento de artes', 'Desenvolvimento do EAD'],
+    date: "Nov 2020 - Jul 2022 · 1 ano 9 meses",
+    title: "Desenvolvedor Front-end",
+    company: "Theòs Sistemas Eclesiais",
+    link: "https://www.theos.com.br/",
+    description: ["Angular 2+", "AngularJS", "NX", "Azure DevOps"],
+  },
+  {
+    date: "Mar 2020 - Nov 2020 · 9 meses",
+    title: "Desenvolvedor",
+    company: "DB1 Global Software",
+    link: "https://www.db1.com.br/",
+    description: [
+      "Java",
+      "Spring",
+      "MySQL",
+      "Flyway",
+      "Azure DevOps",
+      "Kubernetes",
+    ],
+  },
+  {
+    date: "Fev 2019 - Mar 2020 · 1 ano 2 meses",
+    title: "Desenvolvedor Trainee",
+    company: "DB1 Global Software",
+    link: "https://www.db1.com.br/",
+    description: [
+      "C#",
+      ".NET",
+      "JQuery",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Microsoft SQL Server",
+    ],
+  },
+  {
+    date: "Nov 2018 - Fev 2019 · 4 meses",
+    title: "Desenvolvedor Estagiário",
+    company: "DB1 Global Software",
+    link: "https://www.db1.com.br/",
+    description: ["Java", "JavaScript", "HTML", "CSS", "SQL"],
+  },
+  {
+    date: "Jul 2018 - Nov 2018 · 5 meses",
+    title: "Suporte Técnico",
+    company: "Universidade Estadual de Maringá",
+    link: "https://www.uem.br/",
+    description: [
+      "Suporte técnico",
+      "Manutenção de hardware",
+      "Atendimento ao cliente",
+    ],
   },
 ];
 
 const projects = [
   {
-    name: 'Dress Code Curitiba',
-    link: 'https://dresscodecuritiba.com.br/',
-    title: 'Front-End · UI/UX Design',
-    description: 'Alugue seu vestido de festa ideal em Curitiba. Grande variedade de estilos e tamanhos para todas as ocasiões. Garanta seu look perfeito!',
+    name: "TrainerEase",
+    link: "https://trainerease-frontend.onrender.com/",
+    title: "Full Cycle Developer",
+    description:
+      "O TrainerEase tem como objetivo ajudar todos os Personal trainers a se organizar, aumentar a quantidade de alunos e economizar tempo em seu dia-a-dia",
   },
   {
-    name: 'Bichinhos',
-    link: 'https://bichinhos.app/',
-    title: 'Front-End · UI/UX Design',
-    description: 'O jeito mais fofinho de adotar seu bichinho. Encontre bichinhos para adoção, ajude a encontrar bichinhos desaparecidos e mantenha seus bichinhos seguro.',
-  },
-  {
-    name: 'Let me pay',
-    link: 'https://letmepay.io/',
-    title: 'Front-End · UI/UX Design',
-    description: 'Pagamentos simplificados. Receba pagamentos e envie uma remessa utilizando nossas soluções.',
-  },
-  {
-    name: 'Gus.vision',
-    link: 'https://gus.vision/',
-    title: 'Front-End · UI/UX Design',
-    description: 'Correria desde 1996.',
-  },
-  {
-    name: 'Númeric0',
-    link: 'https://numeric0.com/',
-    title: 'Front-End · UI/UX Design',
-    description: 'Pensar, Desenhar, Desenvolver, Lançar, Repetir.',
-  },
-  {
-    name: 'Seotopper',
-    link: 'https://seotopper.netlify.app/',
-    title: 'Front-End · UI/UX Design',
-    description: 'Complete SEO generator with all meta-tags including JSON-LD, build your Seo in seconds.',
-  },
-  {
-    name: 'Lazy Days',
-    link: 'https://lazy-days.netlify.app/',
-    title: 'Front-End · UI/UX Design',
-    description: 'Rain noise app for good sleep',
-  },
-  {
-    name: 'Dr. Lucas Bittencourt',
-    link: 'https://drlucasbittencourt.com.br/',
-    title: 'Front-End · UI/UX Design',
-    description: 'O melhor amigo da saúde do homem e de uma vida sexual mais saudável e ativa.',
-  },
-  {
-    name: 'Design Tokens Generator',
-    link: 'https://gustavoquinalha.github.io/design-tokens-generator/',
-    title: 'Front-End · UI/UX Design',
-    description: 'Design tokens are the minimum elements of the design system.',
-  },
-  {
-    name: 'Sizify',
-    link: 'https://gustavoquinalha.github.io/sizify/',
-    title: 'Front-End · UI/UX Design',
-    description: 'A tool for preview changes and test on multiple devices instantly.',
-  },
-  {
-    name: 'Overleasy',
-    link: 'https://gus.vision/overleasy/',
-    title: 'Front-End · UI/UX Design',
-    description: 'With overleasy you can view your posts, covers, profile photos and much more.',
-  },
-  {
-    name: 'Jekyll Help Center Theme',
-    link: 'https://gustavoquinalha.github.io/jekyll-help-center-theme/',
-    title: 'Front-End · UI/UX Design',
-    description: 'Simple and responsive Jekyll theme for help center.',
-  },
-  {
-    name: 'cs2bombs',
-    link: 'https://cs2bombs.netlify.app/',
-    title: 'Front-End · UI/UX Design',
-    description: 'Learn how to do all CS2 utilities.',
-  },
-];
-
-const products = [
-  {
-    name: 'Boné Gus.vision - Preto',
-    link: 'https://shop.gus.vision/produtos/bone-correria-desde-1996-preto/',
-    price: '100',
-    image: '/bone-preto.webp',
-  },
-  {
-    name: 'Boné Gus.vision - Amarelo',
-    link: 'https://shop.gus.vision/produtos/bone-correria-desde-1996-amarelo/',
-    price: '100',
-    image: '/bone-amarelo.webp',
+    name: "BattleBit Server List",
+    link: "https://bichinhos.app/",
+    title: "Full Cycle Developer",
+    description: "Lista de Servidores do game BattleBit",
   },
 ];
 ---
@@ -140,7 +158,7 @@ const products = [
     <Skills items={skills} />
     <Experience items={career} />
     <Projects items={projects} />
-    <Products items={products} />
+    <Products items={[]} />
     <Contact />
   </div>
 
