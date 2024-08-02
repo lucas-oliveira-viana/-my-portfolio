@@ -5,7 +5,6 @@ const subtitle = "Desenvolvedor de Software";
 const description =
   "Desenvolvedor de software com experiência em todas as etapas do desenvolvimento, desde front-end e back-end até banco de dados, integração de APIs, CI/CD e infraestrutura, motivado por desafios tecnológicos e comprometido com a excelência técnica em ambientes ágeis.";
 const url = "https://gus.vision/";
-const image = "https://gus.vision/gus.webp";
 ---
 
 <!doctype html>
@@ -28,7 +27,6 @@ const image = "https://gus.vision/gus.webp";
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href=`${url}favicon.ico` />
     <meta name="robots" content="index, follow" />
     <meta name="googlebots" content="index, follow" />
     <meta name="generator" content={Astro.generator} />
@@ -44,18 +42,9 @@ const image = "https://gus.vision/gus.webp";
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:image:alt" content=`${title} - ${subtitle}` />
-    <meta property="og:image" content={image} />
     <meta property="og:url" content={url} />
     <meta property="fb:app_id" content="" />
     <meta property="og:locale" content="pt-BR" />
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@gustavoquinalha" />
-    <meta name="twitter:url" content={url} />
-    <meta name="twitter:title" content=`${title} - ${subtitle}` />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
-    <meta name="twitter:image:alt" content={title} />
   </head>
   <body
     class="w-full content bg-white dark:bg-zinc-950 mb-14 md:mb-0 transition-colors"
